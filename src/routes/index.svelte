@@ -1,9 +1,22 @@
 <script context="module" lang="ts">
+	import type { Load } from '@sveltejs/kit';
+
+	export const load: Load = async ({ fetch }) => {
+		const res = await fetch('/projects');
+		const data = await res.json();
+
+		return { props: { projects: data } };
+	};
+
 	export const prerender = true;
 </script>
 
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+
+	import type { Project } from '$lib/types';
+
+	export let projects: Project[];
 </script>
 
 <svelte:head>
@@ -27,6 +40,16 @@
 	</h2>
 
 	<Counter />
+</section>
+
+<section>
+	<h2>Projects</h2>
+	{#each projects as project}
+		<div>
+			<h4>{project.name}</h4>
+			<p>{project.owner.username}</p>
+		</div>
+	{/each}
 </section>
 
 <style>

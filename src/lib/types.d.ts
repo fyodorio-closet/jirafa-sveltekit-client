@@ -5,3 +5,12 @@
 export interface Locals {
 	userid: string;
 }
+
+export interface User {
+	username: string;
+}
+
+export interface Project {
+	name: string;
+	owner: User;
+}

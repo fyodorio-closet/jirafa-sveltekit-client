@@ -1,0 +1,21 @@
+<svelte:head>
+	<title>Login</title>
+</svelte:head>
+
+<h1>Login</h1>
+<form method="POST" action="/login">
+	<fieldset>
+		<label for="email">Email</label>
+		<input id="email" type="email" placeholder="user@email.net" name="email" />
+		<label for="password">Password</label>
+		<input id="password" type="password" placeholder="Your password" name="password" />
+		<input class="button-primary" type="submit" value="Login" />
+	</fieldset>
+</form>
+<p>Don't have an account? <a href="/signup">Signup</a></p>
+
+<style>
+	form {
+		max-width: 420px;
+	}
+</style>
