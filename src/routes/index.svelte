@@ -12,8 +12,6 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-
 	import type { Project } from '$lib/types';
 
 	export let projects: Project[];
@@ -24,30 +22,11 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<section>
-	<h2>Projects</h2>
+	<h1>Projects</h1>
 	{#each projects as project}
 		<div>
-			<h4>{project.name}</h4>
-			<p>{project.owner.username}</p>
+			<h2>{project.name}</h2>
+			<h4>{project.owner.username}</h4>
 		</div>
 	{/each}
 </section>
@@ -59,24 +38,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
 	}
 </style>
