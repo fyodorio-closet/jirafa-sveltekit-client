@@ -35,8 +35,8 @@
 	section {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		justify-content: start;
+		align-items: start;
 		flex: 1;
 	}
 </style>
