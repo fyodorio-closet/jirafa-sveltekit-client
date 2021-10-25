@@ -24,7 +24,8 @@
 <p>Already have an account? <a href="/login">Login</a></p>
 
 <style>
-	form {
-		max-width: 420px;
-	}
+    fieldset {
+        display: flex;
+        flex-direction: column;
+    }
 </style>

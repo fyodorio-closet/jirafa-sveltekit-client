@@ -15,7 +15,8 @@
 <p>Don't have an account? <a href="/signup">Signup</a></p>
 
 <style>
-	form {
-		max-width: 420px;
+	fieldset {
+		display: flex;
+		flex-direction: column;
 	}
 </style>
