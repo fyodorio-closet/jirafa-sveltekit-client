@@ -1,42 +1,21 @@
-<script context="module" lang="ts">
-	import type { Load } from '@sveltejs/kit';
+<script context="module">
+	import { browser, dev } from '$app/env';
 
-	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('/projects');
-		const data = await res.json();
+	// we don't need any JS on this page, though we'll load
+	// it in dev so that we get hot module replacement...
+	export const hydrate = dev;
 
-		return { props: { projects: data } };
-	};
+	// ...but if the client-side router is already loaded
+	// (i.e. we came here from elsewhere in the app), use it
+	export const router = browser;
 
+	// since there's no dynamic data here, we can prerender
+	// it so that it gets served as a static asset in prod
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import type { Project } from '$lib/types';
-
-	export let projects: Project[];
-</script>
-
 <svelte:head>
-	<title>Home</title>
+	<title>Landing page</title>
 </svelte:head>
 
-<section>
-	<h1>Projects</h1>
-	{#each projects as project}
-		<div>
-			<h2>{project.name}</h2>
-			<h4>{project.owner.username}</h4>
-		</div>
-	{/each}
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: start;
-		flex: 1;
-	}
-</style>
+<h1>Welcome to Jirafa</h1>

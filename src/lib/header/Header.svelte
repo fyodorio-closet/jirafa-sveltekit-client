@@ -6,71 +6,29 @@
 	<nav>
 		<ul>
 			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
-			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
-			<li class:active={$page.path === '/signup'}><a sveltekit:prefetch href="/signup">Signup</a></li>
+			<li class:active={$page.path === '/app'}><a sveltekit:prefetch href="/app">App</a></li>
+			<li class:active={$page.path === '/signup'}>
+				<a sveltekit:prefetch href="/signup">Signup</a>
+			</li>
 			<li class:active={$page.path === '/login'}><a sveltekit:prefetch href="/login">Login</a></li>
 		</ul>
 	</nav>
 </header>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
+	a {
+		text-decoration: none;
 	}
-
-	nav {
-		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
 	ul {
-		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		list-style: none;
-		background: var(--background);
-		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-	}
-
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid cadetblue;
-	}
-
-	nav a {
 		display: flex;
-		height: 100%;
-		align-items: center;
-		padding: 0 1em;
-		color: darkred;
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-		transition: color 0.2s linear;
 	}
-
-	a:hover {
-		color: cadetblue;
+	li:not(:first-child) {
+		margin-left: 1rem;
+	}
+	li.active {
+		text-decoration: underline;
 	}
 </style>
