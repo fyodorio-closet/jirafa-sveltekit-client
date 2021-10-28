@@ -10,3 +10,9 @@
 </main>
 
 <AppFooter />
+
+<style>
+    main {
+        flex: auto;
+    }
+</style>

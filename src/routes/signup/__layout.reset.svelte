@@ -10,3 +10,9 @@
 </main>
 
 <AuthFooter />
+
+<style>
+    main {
+        flex: auto;
+    }
+</style>
