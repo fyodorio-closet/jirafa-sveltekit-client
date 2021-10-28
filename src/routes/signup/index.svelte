@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>Create an account</title>
+	<title>Create an account | Jirafa</title>
 </svelte:head>
 
-<h1>Create an account</h1>
+<h2>Create an account</h2>
 
 <form method="POST" action="/signup">
 	<fieldset>
@@ -24,8 +24,8 @@
 <p>Already have an account? <a href="/login">Login</a></p>
 
 <style>
-    fieldset {
-        display: flex;
-        flex-direction: column;
-    }
+	fieldset {
+		display: flex;
+		flex-direction: column;
+	}
 </style>

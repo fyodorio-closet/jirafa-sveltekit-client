@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>Login</title>
+	<title>Login | Jirafa</title>
 </svelte:head>
 
-<h1>Login</h1>
+<h2>Login</h2>
 <form method="POST" action="/login">
 	<fieldset>
 		<label for="email">Email</label>

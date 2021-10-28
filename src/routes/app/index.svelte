@@ -2,7 +2,7 @@
 	import type { Load } from '@sveltejs/kit';
 
 	export const load: Load = async ({ fetch }) => {
-		const res = await fetch('/projects');
+		const res = await fetch('/app/projects');
 		const data = await res.json();
 
 		return { props: { projects: data } };
@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>App</title>
+	<title>Jirafa App</title>
 </svelte:head>
 
 <section>

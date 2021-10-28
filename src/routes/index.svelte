@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { browser, dev } from '$app/env';
 
 	// we don't need any JS on this page, though we'll load
@@ -15,7 +15,7 @@
 </script>
 
 <svelte:head>
-	<title>Landing page</title>
+	<title>Achieve your goals now | Jirafa</title>
 </svelte:head>
 
 <h1>Welcome to Jirafa</h1>
