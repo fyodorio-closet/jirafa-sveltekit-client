@@ -11,3 +11,9 @@
 </main>
 
 <LandingFooter />
+
+<style>
+	main {
+		flex: auto;
+	}
+</style>

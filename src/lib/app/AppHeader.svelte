@@ -1,3 +1,9 @@
 <header>
-	<h1>Jirafa App</h1>
+	<p>search</p>
 </header>
+
+<style>
+	header {
+			height: 38px;
+	}
+</style>
