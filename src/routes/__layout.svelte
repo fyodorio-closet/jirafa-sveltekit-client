@@ -1,14 +1,13 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
+	import LandingHeader from '$lib/landing/LandingHeader.svelte';
+	import LandingFooter from '$lib/landing/LandingFooter.svelte';
 	import '../app.css';
 </script>
 
-<Header />
+<LandingHeader />
 
 <main>
 	<slot />
 </main>
 
-<footer>
-	<p>(c) fyodorio</p>
-</footer>
+<LandingFooter />
