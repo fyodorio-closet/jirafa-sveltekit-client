@@ -4,6 +4,7 @@
 
 <style>
 	header {
-			height: 38px;
+		height: 38px;
+		background-color: antiquewhite;
 	}
 </style>
