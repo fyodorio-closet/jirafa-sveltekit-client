@@ -1,10 +1,11 @@
 <script lang="ts">
 	import BlockHeader from '$lib/app/BlockHeader.svelte';
+	import { MockScrollableContent } from './mockScrollableContent';
 </script>
 
 <aside>
 	<BlockHeader />
-	<p>Details Bar</p>
+	<p><span>Details Bar. </span><span>{MockScrollableContent}</span></p>
 </aside>
 
 <style>
