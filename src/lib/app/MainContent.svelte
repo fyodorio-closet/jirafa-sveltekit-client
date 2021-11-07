@@ -13,7 +13,7 @@
 		display: flex;
 		flex-direction: column;
 		flex-basis: 0;
-		flex-grow: 3;
+		flex-grow: 2;
 	}
 	p {
 		display: flex;
