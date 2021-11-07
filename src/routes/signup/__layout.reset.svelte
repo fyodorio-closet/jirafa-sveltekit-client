@@ -12,7 +12,7 @@
 <AuthFooter />
 
 <style>
-    main {
-        flex: auto;
-    }
+	main {
+		flex: auto;
+	}
 </style>

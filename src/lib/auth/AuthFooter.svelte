@@ -3,7 +3,7 @@
 </footer>
 
 <style>
-    footer {
-        height: 80px;
-    }
+	footer {
+		height: 80px;
+	}
 </style>

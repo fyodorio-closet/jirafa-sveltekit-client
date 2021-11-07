@@ -13,6 +13,10 @@
 
 <script lang="ts">
 	import type { Project } from '$lib/types';
+	import ProjectsBar from '$lib/app/ProjectsBar.svelte';
+	import IssuesBar from '$lib/app/IssuesBar.svelte';
+	import MainContent from '$lib/app/MainContent.svelte';
+	import DetailsBar from '$lib/app/DetailsBar.svelte';
 
 	export let projects: Project[];
 </script>
@@ -22,21 +26,16 @@
 </svelte:head>
 
 <section>
-	<h1>Projects</h1>
-	{#each projects as project}
-		<div>
-			<h2>{project.name}</h2>
-			<h4>{project.owner.username}</h4>
-		</div>
-	{/each}
+	<ProjectsBar {projects} />
+	<IssuesBar />
+	<MainContent />
+	<DetailsBar />
 </section>
 
 <style>
 	section {
 		display: flex;
-		flex-direction: column;
-		justify-content: start;
-		align-items: start;
-		flex: 1;
+		flex-direction: row;
+		flex-grow: 1;
 	}
 </style>

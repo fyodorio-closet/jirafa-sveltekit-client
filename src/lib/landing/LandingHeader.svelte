@@ -12,7 +12,7 @@
 			<li class:active={$page.path === '/app'}><a sveltekit:prefetch href="/app">App</a></li>
 			<li><a href="https://github.com/jirafahq/jirafa-sveltekit-client">GitHub</a></li>
 
-			<li class="placeholder"></li>
+			<li class="placeholder" />
 
 			<li class:active={$page.path === '/signup'}>
 				<a sveltekit:prefetch href="/signup">Signup</a>
@@ -41,7 +41,7 @@
 	}
 	nav {
 		margin-left: 1rem;
-			flex: auto;
+		flex: auto;
 	}
 	a {
 		text-decoration: none;
@@ -59,6 +59,6 @@
 		text-decoration: underline;
 	}
 	.placeholder {
-			flex: auto;
+		flex: auto;
 	}
 </style>
