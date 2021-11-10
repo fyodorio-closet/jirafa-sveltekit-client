@@ -57,14 +57,14 @@
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 600;
 	src: url('/fonts/Lato/Lato-Black.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Lato';
 	font-style: italic;
-	font-weight: 500;
+	font-weight: 600;
 	src: url('/fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
 }
 
